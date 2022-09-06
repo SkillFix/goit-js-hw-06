@@ -29,7 +29,7 @@ const images = [
 
 // makeItemLink(images);
 
-// // TODO ↓↓↓ Второй вариант
+// TODO ↓↓↓ Второй вариант
 
 const list = document.querySelector('.gallery');
 
@@ -50,6 +50,8 @@ list.style.gap = '30px';
 list.style.listStyle = 'none';
 const test = document.querySelector('.picture');
 
+// TODO ↓↓↓ Третий вариант
+
 // const gallery = document.querySelector('.gallery');
 
 // const makeImages = images.map(image => {
@@ -59,4 +61,4 @@ const test = document.querySelector('.picture');
 //   return imageEl;
 // });
 // gallery.append(...makeImages);
-console.log(makeImages);
+// console.log(makeImages);
