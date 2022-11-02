@@ -1,39 +1,35 @@
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-const list = document.querySelector('#ingredients');
+const listEl = document.querySelector('#ingredients');
 const liArray = [];
 
-// ingredients.forEach(ingredient => {
-//   const item = document.createElement('li');
-//   item.className = 'item';
-//   item.textContent = ingredient;
-//   liArray.push(item);
-// });
+ingredients.forEach(ingredient => {
+  const itemEl = document.createElement('li');
+  itemEl.textContent = ingredient;
+  itemEl.classList.add('item');
+  liArray.push(itemEl);
+});
+listEl.append(...liArray);
 
-// list.append(...liArray);
-
-// TODO ↓↓↓ Перебрал масив ингридиентов и создал новый c помощью map
-// TODO ↓↓↓ на каждой интерации создал лишку с помощью createElement(),
-// TODO ↓↓↓ наполнил лишки текстом из элементов масива,
-// TODO ↓↓↓ добавил класс каждой лишке
-
-// const makeItem = ingredients =>
-//   ingredients.map(ingredient => {
-//     const createItem = document.createElement('li');
-//     createItem.textContent = ingredient;
-//     createItem.classList.add('item');
-//     return createItem;
+// TODO second version
+// const makeItemEl = ingredients => {
+//   return ingredients.map(ingredient => {
+//     const itemEl = document.createElement('li');
+//     itemEl.textContent = ingredient;
+//     itemEl.classList.add('item');
+//     return itemEl;
 //   });
+// };
 
-// const elements = makeItem(ingredients);
-// list.append(...elements);
+// const elements = makeItemEl(ingredients);
+// listEl.append(...elements);
 
-// TODO ↓↓↓ упрощенный вариант
+// TODO ↓↓↓ third version
 
-list.append(
-  ...ingredients.map(ingredient => {
-    const createItem = document.createElement('li');
-    createItem.textContent = ingredient;
-    createItem.classList.add('item');
-    return createItem;
-  }),
-);
+// listEl.append(
+//   ...ingredients.map(ingredient => {
+//     const itemEl = document.createElement('li');
+//     itemEl.textContent = ingredient;
+//     itemEl.classList.add('item');
+//     return itemEl;
+//   }),
+// );
