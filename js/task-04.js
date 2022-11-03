@@ -8,19 +8,17 @@ const counterEl = document.querySelector('#value');
 
 const counterValue = {
   value: 0,
-  increment() {
-    this.value += 1;
-  },
   decrement() {
     this.value -= 1;
   },
+  increment() {
+    this.value += 1;
+  },
 };
-
 btnDecrement.addEventListener('click', function () {
   counterValue.decrement();
   counterEl.textContent = counterValue.value;
 });
-
 btnIncrement.addEventListener('click', function () {
   counterValue.increment();
   counterEl.textContent = counterValue.value;

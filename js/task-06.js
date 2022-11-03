@@ -3,19 +3,19 @@
 // 2. Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
-const textInput = document.querySelector('#validation-input');
-console.log(textInput.getAttribute('data-length'));
+const inputEl = document.querySelector('#validation-input');
 
-textInput.addEventListener('blur', event => {
-  if (event.target.value.length.toString() === textInput.getAttribute('data-length')) {
-    textInput.classList.add('valid');
-    if (textInput.classList.contains('invalid')) {
-      textInput.classList.remove('invalid');
+inputEl.addEventListener('blur', event => {
+  if (event.target.value.length.toString() === inputEl.getAttribute('data-length')) {
+    inputEl.classList.add('valid');
+
+    if (inputEl.classList.contains('invalid')) {
+      inputEl.classList.remove('invalid');
     }
   } else {
-    if (textInput.classList.contains('valid')) {
-      textInput.classList.remove('valid');
+    if (inputEl.classList.contains('valid')) {
+      inputEl.classList.remove('valid');
     }
-    textInput.classList.add('invalid');
+    inputEl.classList.add('invalid');
   }
 });
